@@ -1,12 +1,12 @@
 {
-  "name": "@cromarmot/v2-m-picker",
+  "name": "@cromarmot/v2-nut-picker",
   "version": "1.0.0",
   "description": "",
   "author": "https://github.com/cromarmot",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cromarmot/v2-m-picker.git"
+    "url": "https://github.com/cromarmot/v2-nut-picker.git"
   },
   "keywords": [
     "vue",
@@ -17,20 +17,20 @@
     "src",
     "dist"
   ],
-  "main": "dist/v2-m-picker.umd.js",
-  "module": "dist/v2-m-picker.esm.js",
-  "unpkg": "dist/v2-m-picker.min.js",
+  "main": "dist/v2-nut-picker.umd.js",
+  "module": "dist/v2-nut-picker.esm.js",
+  "unpkg": "dist/v2-nut-picker.min.js",
   "browser": {
-    "./sfc": "src/v2-m-picker.vue"
+    "./sfc": "src/v2-nut-picker.vue"
   },
   "scripts": {
     "dev": "vue-styleguidist server",
     "test": "jest --verbose",
     "doc": "vue-styleguidist build",
     "build": "npm run build:unpkg & npm run build:es & npm run build:umd & npm run doc",
-    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/v2-m-picker.umd.js",
-    "build:es": "rollup --config build/rollup.config.js --format es --file dist/v2-m-picker.esm.js",
-    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/v2-m-picker.min.js",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/v2-nut-picker.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/v2-nut-picker.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/v2-nut-picker.min.js",
     "stdver": "standard-version -m '[skip ci] chore(release): v%s'",
     "release": "gren release --override"
   },

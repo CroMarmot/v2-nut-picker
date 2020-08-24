@@ -1,5 +1,5 @@
 // Import vue component
-import Component from './v2-m-picker.vue'
+import Component from './v2-nut-picker.vue'
 
 // `Vue.use` automatically prevents you from using
 // the same plugin more than once,

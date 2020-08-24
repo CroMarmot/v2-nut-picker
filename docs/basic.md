@@ -2,7 +2,7 @@
 
 ```vue
 <template>
-  <v2-m-picker/>
+  <v2-nut-picker/>
 </template>
 
 <script>

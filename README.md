@@ -1,10 +1,18 @@
-# v2-m-picker
+# Based on
 
-[![Build Status](https://badgen.net/travis/cromarmot/v2-m-picker/master)](https://travis-ci.com/cromarmot/v2-m-picker)
-[![NPM Download](https://badgen.net/npm/dm/@cromarmot/v2-m-picker)](https://www.npmjs.com/package/@cromarmot/v2-m-picker)
-[![NPM Version](https://badge.fury.io/js/%40cromarmot%2Fv2-m-picker.svg)](https://www.npmjs.com/package/@cromarmot/v2-m-picker)
-[![NPM License](https://badgen.net/npm/license/@cromarmot/v2-m-picker)](https://github.com/cromarmot/v2-m-picker/blob/master/LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/cromarmot/v2-m-picker/pulls)
+https://github.com/FEMessage/vue-sfc-cli
+
+https://github.com/jdf2e/nutui
+
+https://github.com/jdf2e/nutui/tree/v2-dev/src/packages/picker
+
+# v2-nut-picker
+
+[![Build Status](https://badgen.net/travis/cromarmot/v2-nut-picker/master)](https://travis-ci.com/cromarmot/v2-nut-picker)
+[![NPM Download](https://badgen.net/npm/dm/@cromarmot/v2-nut-picker)](https://www.npmjs.com/package/@cromarmot/v2-nut-picker)
+[![NPM Version](https://badge.fury.io/js/%40cromarmot%2Fv2-nut-picker.svg)](https://www.npmjs.com/package/@cromarmot/v2-nut-picker)
+[![NPM License](https://badgen.net/npm/license/@cromarmot/v2-nut-picker)](https://github.com/cromarmot/v2-nut-picker/blob/master/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/cromarmot/v2-nut-picker/pulls)
 [![Automated Release Notes by gren](https://img.shields.io/badge/%F0%9F%A4%96-release%20notes-00B2EE.svg)](https://github-tools.github.io/github-release-notes/)
 
 short description + sample image(png/gif/mp4)
@@ -40,7 +48,7 @@ If there is no more words to write, this section can be deleted.
 
 ## Links
 
-- [docs](https://cromarmot.github.io/v2-m-picker/)
+- [docs](https://cromarmot.github.io/v2-nut-picker/)
 
 [⬆ Back to Top](#table-of-contents)
 

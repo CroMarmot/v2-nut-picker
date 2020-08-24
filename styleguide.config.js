@@ -41,7 +41,7 @@ module.exports = {
   styleguideDir: 'docs',
   pagePerSection: true,
   ribbon: {
-    url: 'https://github.com/cromarmot/v2-m-picker'
+    url: 'https://github.com/cromarmot/v2-nut-picker'
   },
   sections,
   webpackConfig: {
