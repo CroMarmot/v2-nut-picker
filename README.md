@@ -1,5 +1,7 @@
 # v2-nut-picker
 
+vue2 mobile picker components modified based on nutui.
+
 [![Build Status](https://badgen.net/travis/cromarmot/v2-nut-picker/master)](https://travis-ci.com/cromarmot/v2-nut-picker)
 [![NPM Download](https://badgen.net/npm/dm/@cromarmot/v2-nut-picker)](https://www.npmjs.com/package/@cromarmot/v2-nut-picker)
 [![NPM Version](https://badge.fury.io/js/%40cromarmot%2Fv2-nut-picker.svg)](https://www.npmjs.com/package/@cromarmot/v2-nut-picker)
@@ -7,7 +9,9 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/cromarmot/v2-nut-picker/pulls)
 [![Automated Release Notes by gren](https://img.shields.io/badge/%F0%9F%A4%96-release%20notes-00B2EE.svg)](https://github-tools.github.io/github-release-notes/)
 
-vue2 mobile picker components modified based on nutui.
+## Demo
+
+- [codesandbox.io](https://codesandbox.io/s/late-glade-eyqgw?file=/src/App.vue)
 
 ## Table of Contents
 
@@ -22,8 +26,6 @@ vue2 mobile picker components modified based on nutui.
 
 ## Introduction
 
-[⬆ Back to Top](#table-of-contents)
-
 ## Features
 
 Removed the title confirmation and cancel button, so you can use this components anywhere you want.
@@ -34,13 +36,9 @@ Add warning message in development environment.
 
 Support mouse event on PC
 
-[⬆ Back to Top](#table-of-contents)
-
 ## Install
 
 `yarn add @cromarmot/v2-nut-picker`
-
-[⬆ Back to Top](#table-of-contents)
 
 ## Usage
 
@@ -87,15 +85,9 @@ export default {
 </script>
 ```
 
-[⬆ Back to Top](#table-of-contents)
-
 ## Links
 
 - [docs](https://cromarmot.github.io/v2-nut-picker/)
-
-- [codesandbox.io](https://codesandbox.io/s/late-glade-eyqgw?file=/src/App.vue)
-
-[⬆ Back to Top](#table-of-contents)
 
 ## Contributing
 
@@ -108,8 +100,6 @@ For those who are interested in contributing to this project, such as:
 
 Please refer to our [contributing guide](https://github.com/FEMessage/.github/blob/master/CONTRIBUTING.md).
 
-[⬆ Back to Top](#table-of-contents)
-
 ## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -120,13 +110,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
-[⬆ Back to Top](#table-of-contents)
-
 ## License
 
 [MIT](./LICENSE)
-
-[⬆ Back to Top](#table-of-contents)
 
 # Based on
 
