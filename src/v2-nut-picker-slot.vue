@@ -70,12 +70,16 @@ export default {
       this.$el.addEventListener('touchstart', this.touchStart)
       this.$el.addEventListener('touchmove', this.touchMove)
       this.$el.addEventListener('touchend', this.touchEnd)
+      this.$el.addEventListener('mousedown', this.mouseDown)
+      this.$el.addEventListener('mouseup', this.mouseEnd)
     })
   },
   beforeDestroy() {
     this.$el.removeEventListener('touchstart', this.touchStart)
     this.$el.removeEventListener('touchmove', this.touchMove)
     this.$el.removeEventListener('touchend', this.touchEnd)
+    this.$el.removeEventListener('mousedown', this.mouseDown)
+    this.$el.removeEventListener('mouseup', this.mouseEnd)
     clearTimeout(this.timer)
   },
   methods: {
@@ -157,22 +161,45 @@ export default {
     touchStart(event) {
       event.preventDefault()
       const changedTouches = event.changedTouches[0]
-      this.touchParams.startY = changedTouches.pageY
-      this.touchParams.startTime = event.timestamp || Date.now()
-      this.transformY = this.scrollDistance
+      this.commonStart(changedTouches.pageY)
     },
     touchMove(event) {
       event.preventDefault()
       const changedTouches = event.changedTouches[0]
-      this.touchParams.lastY = changedTouches.pageY
-      this.touchParams.lastTime = event.timestamp || Date.now()
-      const move = this.touchParams.lastY - this.touchParams.startY
-      this.setMove(move)
+      this.commonMove(changedTouches.pageY)
     },
     touchEnd(event) {
       event.preventDefault()
       const changedTouches = event.changedTouches[0]
-      this.touchParams.lastY = changedTouches.pageY
+      this.commonEnd(changedTouches.pageY)
+    },
+    mouseDown(event) {
+      event.preventDefault()
+      this.commonStart(event.pageY)
+      this.$el.addEventListener('mousemove', this.mouseMove)
+    },
+    mouseMove(event) {
+      event.preventDefault()
+      this.commonMove(event.pageY)
+    },
+    mouseEnd(event) {
+      event.preventDefault()
+      this.commonEnd(event.pageY)
+      this.$el.removeEventListener('mousemove', this.mouseMove)
+    },
+    commonStart(Y) {
+      this.touchParams.startY = Y
+      this.touchParams.startTime = event.timestamp || Date.now()
+      this.transformY = this.scrollDistance
+    },
+    commonMove(Y) {
+      this.touchParams.lastY = Y
+      this.touchParams.lastTime = event.timestamp || Date.now()
+      const move = this.touchParams.lastY - this.touchParams.startY
+      this.setMove(move)
+    },
+    commonEnd(Y) {
+      this.touchParams.lastY = Y
       this.touchParams.lastTime = event.timestamp || Date.now()
       let move = this.touchParams.lastY - this.touchParams.startY
       let moveTime = this.touchParams.lastTime - this.touchParams.startTime
