@@ -71,7 +71,6 @@ export default {
       this.$el.addEventListener('touchmove', this.touchMove)
       this.$el.addEventListener('touchend', this.touchEnd)
       this.$el.addEventListener('mousedown', this.mouseDown)
-      this.$el.addEventListener('mouseup', this.mouseEnd)
     })
   },
   beforeDestroy() {
@@ -79,7 +78,6 @@ export default {
     this.$el.removeEventListener('touchmove', this.touchMove)
     this.$el.removeEventListener('touchend', this.touchEnd)
     this.$el.removeEventListener('mousedown', this.mouseDown)
-    this.$el.removeEventListener('mouseup', this.mouseEnd)
     clearTimeout(this.timer)
   },
   methods: {
@@ -177,6 +175,7 @@ export default {
       event.preventDefault()
       this.commonStart(event.pageY)
       this.$el.addEventListener('mousemove', this.mouseMove)
+      window.addEventListener('mouseup', this.mouseEnd)
     },
     mouseMove(event) {
       event.preventDefault()
@@ -186,6 +185,7 @@ export default {
       event.preventDefault()
       this.commonEnd(event.pageY)
       this.$el.removeEventListener('mousemove', this.mouseMove)
+      window.removeEventListener('mouseup', this.mouseEnd)
     },
     commonStart(Y) {
       this.touchParams.startY = Y
