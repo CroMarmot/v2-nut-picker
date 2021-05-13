@@ -24,15 +24,15 @@ export default {
   methods:{
     choose({self,index,value,changeValueData}){
       console.log(index,value,changeValueData);
-        if(index === 0){
-          if(value > changeValueData[1]){
-            self.updateChooseValue(self, 1, value);
-          }
-        }else if(index === 1){
-          if(value < changeValueData[0]){
-            self.updateChooseValue(self, 0, value);
-          }
+      if(index === 0){
+        if(value > changeValueData[1]){
+          self.updateChooseValue(self, 1, value);
         }
+      }else if(index === 1){
+        if(value < changeValueData[0]){
+          self.updateChooseValue(self, 0, value);
+        }
+      }
     }
   }
 }

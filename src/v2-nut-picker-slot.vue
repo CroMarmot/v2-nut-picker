@@ -128,9 +128,11 @@ export default {
         const deg = `${(Math.abs(Math.round(endMove / this.lineSpacing)) + 1) *
           this.rotation}deg`
         this.setTransform(endMove, type, time, deg)
-        this.currIndex = Math.abs(Math.round(endMove / this.lineSpacing))
+        const currIndex = (this.currIndex = Math.abs(
+          Math.round(endMove / this.lineSpacing)
+        ))
         this.timer = setTimeout(() => {
-          this.setChooseValue(this.currIndex)
+          this.setChooseValue(currIndex)
         }, time / 2)
       } else {
         let deg = '0deg'

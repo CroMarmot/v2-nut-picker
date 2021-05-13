@@ -38,6 +38,8 @@ index 下标从 1 开始改为从 0 开始
 
 增加了 pc mouse 事件支持
 
+修复了 异步取值的一致性问题
+
 ## Features
 
 Removed the title confirmation and cancel button, so you can use this components anywhere you want.
