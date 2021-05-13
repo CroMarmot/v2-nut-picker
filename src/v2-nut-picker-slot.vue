@@ -134,6 +134,17 @@ export default {
         }, time / 2)
       } else {
         let deg = '0deg'
+        // 限定滚动距离
+        const boundCnt = 3
+        const upperBound = boundCnt * this.lineSpacing
+        const lowerBound =
+          (-boundCnt - (this.listData.length - 1)) * this.lineSpacing
+        if (updateMove > upperBound) {
+          updateMove = upperBound + Math.sqrt(updateMove - upperBound)
+        }
+        if (updateMove < lowerBound) {
+          updateMove = lowerBound - Math.sqrt(lowerBound - updateMove)
+        }
         if (updateMove < 0) {
           deg = `${(Math.abs(updateMove / this.lineSpacing) + 1) *
             this.rotation}deg`
