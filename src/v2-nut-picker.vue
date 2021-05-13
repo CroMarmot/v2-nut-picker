@@ -14,9 +14,8 @@
   </div>
 </template>
 <script>
-// https://github.com/jdf2e/nutui/tree/v2-dev/src/packages/picker
-
 import V2NutPickerSlot from './v2-nut-picker-slot.vue'
+
 const Picker = {
   name: 'V2NutPicker',
   components: {
@@ -51,8 +50,10 @@ const Picker = {
   created() {
     if (this.defaultValueData && this.defaultValueData.length) {
       this.chooseValueData = [...this.defaultValueData]
+      this.cacheValueData = [...this.defaultValueData]
     } else {
       this.chooseValueData = this.listData.map(item => item[0])
+      this.cacheValueData = this.listData.map(item => item[0])
     }
   },
   methods: {

@@ -85,8 +85,7 @@ export default {
       if (value) {
         this.transformY = 0
         this.timer = setTimeout(() => {
-          // 有改动就emit 联动修改需要通知 null -> true
-          this.modifyStatus(true, value)
+          this.modifyStatus(null, value)
         }, 10)
       }
     },
@@ -146,6 +145,16 @@ export default {
       }
     },
     setChooseValue(index) {
+      // 范围保护
+      // 因为上面有settimeout， 而触发其它列变化，时可能导致当前列的可选值变化， 所以这里需要保护
+      if (index < 0 || index >= this.listData.length) {
+        console.error(index)
+      }
+      if (index < 0) {
+        index = 0
+      } else if (index >= this.listData.length) {
+        index = this.listData.length - 1
+      }
       /**
        * 滚动后事件
        * @property {String} value - 选中的值

@@ -26,6 +26,18 @@ vue2 mobile picker components modified based on nutui.
 
 ## Introduction
 
+基于: https://github.com/jdf2e/nutui 修改
+
+修改了一点 typo
+
+index 下标从 1 开始改为从 0 开始
+
+考虑到 vue 的`$event` 只能把 emit 的首个参数处理掉，因此所有 emit 改为单个 emit 参数
+
+去掉了没有必要的 把 index 向子组件传递再传回给父组件的动作
+
+增加了 pc mouse 事件支持
+
 ## Features
 
 Removed the title confirmation and cancel button, so you can use this components anywhere you want.
